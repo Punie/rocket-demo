@@ -1,0 +1,23 @@
+[package]
+name = "rocket-demo"
+version = "0.1.0"
+authors = ["Hugo Saracino <hugo.saracino@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.2"
+
+[dependencies.diesel]
+version = "1.4"
+features = ["sqlite"]
+
+[dependencies.rocket_contrib]
+version = "0.4.2"
+default-features = false
+features = ["diesel_sqlite_pool", "json", "serve", "tera_templates"]
+
+[dependencies.serde]
+version = "1.0"
+features = ["derive"]
